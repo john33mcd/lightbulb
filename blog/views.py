@@ -3,12 +3,28 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import CommentForm
+from django.views.generic.edit import CreateView
+from django.urls import reverse_lazy
+from django.contrib import messages
+
 
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'index.html'
     paginate_by = 5
+
+
+class CreatePost(CreateView):
+    model = Post
+    template_name = 'templates/post_form.html'
+    fields = '__all__'
+    success_url = reverse_lazy('home')
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        messages.success(self.request, "Your post was uploaded successfully")
+        return super(CreatePost, self).form_valid(form)
 
 
 class PostDetail(View):
