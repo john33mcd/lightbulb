@@ -4,7 +4,11 @@
 
 <div class="container-fluid">
     <div class="row">
-        <a href="{% url 'post_form' %}"> hello</a>
+        {% if user.is_authenticated %}
+        <a href= "{% url 'post_create' %}"> hello</a>
+        {% else %}
+        <a href = "#"> Please log in to share a post </a>
+        {% endif %}
 
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
