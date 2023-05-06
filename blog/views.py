@@ -6,7 +6,7 @@ from .forms import CommentForm
 from django.urls import reverse_lazy
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from django.views.generic import CreateView, UpdateView
+from django.views.generic import CreateView, UpdateView, DeleteView
 
 
 class PostList(generic.ListView):
@@ -94,6 +94,18 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         return super().form_valid(form)
     
     # checks if current user is author of post and allows update if true
+    def test_func(self):
+        post = self.get_object()
+        if self.request.user == post.author:
+            return True
+        return False
+
+
+class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    model = Post
+    template_name = "post_confirm_delete.html"
+    success_url = '/'
+
     def test_func(self):
         post = self.get_object()
         if self.request.user == post.author:

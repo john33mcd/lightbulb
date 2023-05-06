@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="col-md-8 mt-3 offset-md-2">
+<form method="POST" enctype="multipart/form-data" name="form1">
+
+    {% csrf_token %}
+    <legend> Delete Post</legend>
+    <h2> Are you sure you would like to delete this post "{{ post.title }}"?</h2>
+
+    <button class="btn btn-outline-danger" type="submit">Delete Post</button>
+    <a class="btn btn-outline-primary" href="{% url 'post_detail' post.slug %}">Cancel</a>
+</form>
+</div>
+
+{% endblock %}
