@@ -5,7 +5,8 @@ from .models import Post
 from .forms import CommentForm
 from django.urls import reverse_lazy
 from django.contrib import messages
-from django.views.generic import CreateView
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.views.generic import CreateView, UpdateView
 
 
 class PostList(generic.ListView):
@@ -69,7 +70,7 @@ class PostDetail(View):
         )
 
 
-class PostCreateView(CreateView):
+class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
     fields = ['title', 'content']
     template_name = 'post_form.html'
@@ -79,6 +80,25 @@ class PostCreateView(CreateView):
         form.instance.author = self.request.user
         messages.success(self.request, "Your post was uploaded successfully")
         return super().form_valid(form)
+
+
+class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    model = Post
+    fields = ['title', 'content']
+    template_name = 'post_form.html'
+    success_url = reverse_lazy("home")
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        messages.success(self.request, "Your post was updated successfully")
+        return super().form_valid(form)
+    
+    # checks if current user is author of post and allows update if true
+    def test_func(self):
+        post = self.get_object()
+        if self.request.user == post.author:
+            return True
+        return False
 
 
 class PostLike(View):

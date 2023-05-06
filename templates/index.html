@@ -7,7 +7,7 @@
         {% if user.is_authenticated %}
         <a href= "{% url 'post_create' %}"> hello</a>
         {% else %}
-        <a href = "#"> Please log in to share a post </a>
+        <a href = "{% url 'account_login' %}"> Please log in to share a post </a>
         {% endif %}
 
         <!-- Blog Entries Column -->
