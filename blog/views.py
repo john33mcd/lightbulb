@@ -92,7 +92,7 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         form.instance.author = self.request.user
         messages.success(self.request, "Your post was updated successfully")
         return super().form_valid(form)
-    
+
     # checks if current user is author of post and allows update if true
     def test_func(self):
         post = self.get_object()
@@ -105,6 +105,11 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
     template_name = "post_confirm_delete.html"
     success_url = '/'
+    success_message = "This post has been deleted"
+
+    def delete(self, request, *args, **kwargs):
+        messages.warning(self.request, self.success_message)
+        return super(PostDeleteView, self).delete(request, *args, **kwargs)
 
     def test_func(self):
         post = self.get_object()

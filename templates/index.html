@@ -27,26 +27,17 @@
                                 <div class="image-flash">
                                     <p class="author">Author: {{ post.author }}</p>
                                 </div>
+                                
                             </div>
                             <a href="{% url 'post_detail' post.slug  %}" class="post-link">
                                 <h2 class="card-title">{{ post.title }}</h2>
+
                                 <p class="card-text">{{ post.excerpt }}</p>
                             </a>
                             <hr />
                             <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
                                 {{ post.number_of_likes }}</p>
-                        </div class="container">
-                        <div class="row">
-                            <div class="col">
-                        {% if user.is_authenticated and user == post.author %}
-                        <a href= "{% url 'post_update' post.slug %}" class="btn btn-outline-primary">Update Post ?</a>
-                    </div>
-                    <div class="col">
-                        2 of 2
-                      </div>
-                    </div>
-                        {% endif %}
-                    </div>
+                        
                 </div>
                 {% if forloop.counter|divisibleby:3 %}
             </div>

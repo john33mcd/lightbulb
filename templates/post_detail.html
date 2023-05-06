@@ -14,7 +14,7 @@
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in post.featured_image.url %}
-                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
+                <img src="https://images.pexels.com/photos/1495580/pexels-photo-1495580.jpeg" width="100%">
                 {% else %}
                 <img src=" {{ post.featured_image.url }}" width="100%">
                 {% endif %}
@@ -74,6 +74,18 @@
         <div class="col">
             <hr>
         </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+        {% if user.is_authenticated and user == post.author %}
+        <a href= "{% url 'post_update' post.slug %}" class="btn btn-outline-primary">Update Post ?</a>
+    </div>
+    <div class="col">
+        <a href= "{% url 'post_delete' post.slug %}" class="btn btn-outline-danger">Delete Post ?</a>
+      </div>
+    </div>
+        {% endif %}
     </div>
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3 ">
