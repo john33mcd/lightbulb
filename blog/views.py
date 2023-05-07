@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Post
+from .models import Post, Review
 from .forms import CommentForm
 from django.urls import reverse_lazy
 from django.contrib import messages
@@ -129,3 +129,10 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+class Review_page(generic.ListView):
+    model = Review
+    template_name = "review_page.html"
+    queryset = Review.objects.order_by('-created')
+    paginate_by = 5

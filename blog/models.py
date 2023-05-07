@@ -24,7 +24,7 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
-    
+
     def number_of_likes(self):
         return self.likes.count()
 
@@ -48,3 +48,18 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
+
+
+class Review(models.Model):
+    slug = models.SlugField(max_length=200, unique=True)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="review_list")
+    review_body = models.TextField()
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+    rating = models.IntegerField(default=0)
+
+    class Meta:
+        ordering = ['-created']
+
+    def __str__(self):
+        return f"{self.author}: {self.rating}"
