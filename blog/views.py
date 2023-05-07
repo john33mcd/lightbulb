@@ -131,8 +131,8 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
-class Review_page(generic.ListView):
+class ReviewPage(generic.ListView):
     model = Review
-    template_name = "review_page.html"
     queryset = Review.objects.order_by('-created')
+    template_name = "review_page.html"
     paginate_by = 5

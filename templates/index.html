@@ -10,7 +10,8 @@
         <a href = "{% url 'account_login' %}"> Please log in to share a post </a>
         {% endif %}
 
-        <!-- Blog Entries Column -->
+        <a href = "{% url 'review_page' %}"> sample review page </a>
+
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for post in post_list %}
@@ -37,7 +38,8 @@
                             <hr />
                             <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
                                 {{ post.number_of_likes }}</p>
-                        
+                            </div>
+                            </div> 
                 </div>
                 {% if forloop.counter|divisibleby:3 %}
             </div>
