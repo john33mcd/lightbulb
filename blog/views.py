@@ -136,3 +136,16 @@ class ReviewPage(generic.ListView):
     queryset = Review.objects.order_by('-created')
     template_name = "review_page.html"
     paginate_by = 5
+
+
+class ReviewCreate(LoginRequiredMixin, CreateView):
+    model = Review
+    fields = ['review_body', 'rating']
+    template_name = 'review_form.html'
+    success_url = reverse_lazy("home")
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        messages.success(self.request, "Your post was uploaded successfully")
+        return super().form_valid(form)
+
