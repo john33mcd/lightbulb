@@ -5,30 +5,27 @@
 <div class="container-fluid">
     <div class="row">
         {% if user.is_authenticated %}
-        <a href= "{% url 'post_create' %}"> New Post </a>
+        <a href="{% url 'post_create' %}"> New Post </a>
         {% else %}
-        <a href = "{% url 'account_login' %}"> Please log in to share a post </a>
+        <a href="{% url 'account_login' %}"> Please log in to share a post </a>
         {% endif %}
-
-        <a href = "{% url 'review_page' %}"> sample review page </a>
-
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for post in post_list %}
                 <div class="col-md-12">
-                    <div class="card mb-6">
+                    <div class="card mb-6 centerPost">
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top"
                                     src="https://images.pexels.com/photos/1495580/pexels-photo-1495580.jpeg">
                                 {% else %}
-                                <img  src=" {{ post.featured_image.url }}">
+                                <img src=" {{ post.featured_image.url }}">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author: {{ post.author }}</p>
                                 </div>
-                                
+
                             </div>
                             <a href="{% url 'post_detail' post.slug  %}" class="post-link">
                                 <h2 class="card-title">{{ post.title }}</h2>
@@ -38,8 +35,8 @@
                             <hr />
                             <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
                                 {{ post.number_of_likes }}</p>
-                            </div>
-                            </div> 
+                        </div>
+                    </div>
                 </div>
                 {% if forloop.counter|divisibleby:3 %}
             </div>

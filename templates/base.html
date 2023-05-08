@@ -81,20 +81,17 @@
 
   <main class="flex-shrink-0 main-bg">
     {% block content %}
-    <!-- Content Goes here -->
     {% endblock content %}
   </main>
 
-  <!-- Footer -->
   <footer>
     <div class="card text-center background">
       <div class="card-header">
-        Featured
       </div>
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Testimonials</a>
+        <h5 class="card-title"> We hope you made some progress today</h5>
+        <p class="card-text">Please consider leaving us some feedback on what we done well and what could be done better !</p>
+        <a href="{% url 'review_page' %}" class="btn btn-primary">Site Reviews</a>
       </div>
       <div class="card-footer text-body-secondary">
         2 days ago
