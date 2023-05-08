@@ -3,18 +3,39 @@ font-family: 'Roboto Slab', serif; */
 
 h1{
     font-family: 'Bebas Neue', cursive;
+    color: #EEE8a9;
 }
 
 h2,
 h3,
 h4,
 h5,
-h6 a, p{
+h6, a, p, span{
     font-family:'Roboto Slab', serif;
+    color: #EEE8a9;
 }
 
-#navHeader{
-    background-color: #b9cfcf;
+#navItems{
+    color: #EEE8a9;
+}
+
+.background{
+    background-color: #1F5853;
+}
+
+body{
+    background-color: #6b3C00;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer{
+    margin-top: auto;
+}
+
+.bulbcol{
+    color: #EEE8a9;
 }
 
 .navbar-toggler{
@@ -26,10 +47,8 @@ h6 a, p{
     display: flex;
     justify-content: center;
     margin-top: 20px;
-
 }
 
 a:hover{
     color: black;
 }
-
