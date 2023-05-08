@@ -7,8 +7,3 @@ class CommentForm(forms.ModelForm):
         model = Comment
         fields = ('body',)
 
-
-# class CreatePostForm(forms.ModelForm):
-#     class Meta:
-#         model = Post
-#         fields = '__all__'

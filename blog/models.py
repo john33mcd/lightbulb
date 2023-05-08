@@ -63,3 +63,8 @@ class Review(models.Model):
 
     def __str__(self):
         return f"{self.author}: {self.rating}"
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+        super(Review, self).save(*args, **kwargs)
