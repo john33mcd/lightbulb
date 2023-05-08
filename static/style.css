@@ -1,7 +1,7 @@
 /* font-family: 'Bebas Neue', cursive;
 font-family: 'Roboto Slab', serif; */
 
-h1{
+h1 {
     font-family: 'Bebas Neue', cursive;
     color: #EEE8a9;
     font-size: 60px;
@@ -11,45 +11,75 @@ h2,
 h3,
 h4,
 h5,
-h6, a, p, span{
-    font-family:'Roboto Slab', serif;
+h6,
+a,
+p,
+span {
+    font-family: 'Roboto Slab', serif;
     color: #EEE8a9;
 }
 
-#navItems{
+#navItem1 {
     color: #EEE8a9;
 }
 
-.background{
+#navItem2 {
+    color: #EEE8a9;
+}
+
+#navItem3 {
+    color: #EEE8a9;
+}
+
+#navItem1:hover {
+    color: black;
+}
+
+#navItem2:hover {
+    color: black;
+}
+
+#navItem3:hover {
+    color: black;
+}
+
+
+.background {
     background-color: #1F5853;
 }
 
-body{
+body {
     background-color: #6b3C00;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-footer{
+footer {
     margin-top: auto;
 }
 
-.bulbcol{
+.bulbcol {
     color: #EEE8a9;
 }
 
-.navbar-toggler{
+.navbar-toggler {
     color: black;
     font-size: xx-large;
 }
 
-.title-bar{
+.title-bar {
     display: flex;
     justify-content: center;
     margin-top: 20px;
 }
 
-a:hover{
+a:hover {
     color: black;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
 }

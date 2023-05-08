@@ -140,7 +140,7 @@ class ReviewPage(generic.ListView):
 
 class ReviewCreate(LoginRequiredMixin, CreateView):
     model = Review
-    fields = ['review_body', 'rating']
+    fields = ['title', 'review_body', 'rating']
     template_name = 'review_form.html'
     success_url = reverse_lazy("home")
 

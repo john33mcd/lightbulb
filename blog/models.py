@@ -51,6 +51,7 @@ class Comment(models.Model):
 
 
 class Review(models.Model):
+    title = models.CharField(max_length=200, unique=True, default="Review Title")
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="review_list")
     review_body = models.TextField()
