@@ -31,8 +31,9 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'home' %}"><strong>Lightbulb</strong></a>
-          <span class="lightbulb-icon top-icon navbar-toggler" data-bs-toggle="collapse" aria-label="lightbulb-icon"><i class="far fa-lightbulb"></i></span>
-        
+        <span class="lightbulb-icon top-icon navbar-toggler" data-bs-toggle="collapse" aria-label="lightbulb-icon"><i
+            class="far fa-lightbulb"></i></span>
+
         <div class="collapse navbar-collapse">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             {% if user.is_authenticated %}
@@ -67,12 +68,8 @@
         </div>
       </div>
     </div>
-
-
   </div>
-  <div class="title-bar">
-    <h1> Lightbulb, The home of good ideas </h1>
-  </div>
+
 
 
 
