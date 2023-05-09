@@ -10,7 +10,8 @@ STATUS = ((0, "Draft"), (1, "Published"))
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="blog_posts")
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="blog_posts")
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
     featured_image = CloudinaryField('image', default='placeholder')
@@ -50,14 +51,25 @@ class Comment(models.Model):
         return f"Comment {self.body} by {self.name}"
 
 
+choices = [
+    ('awful', 'awful'),
+    ('bad', 'bad'),
+    ('ok', 'ok'),
+    ('good', 'good'),
+    ('excellent', 'excellent'),
+]
+
+
 class Review(models.Model):
-    title = models.CharField(max_length=200, unique=True, default="Review Title")
+    title = models.CharField(
+        max_length=200, unique=True, default="Review Title")
     slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="review_list")
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="review_list")
     review_body = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-    rating = models.IntegerField(default=0)
+    rating = models.CharField(max_length=20, choices=choices, default='ok')
 
     class Meta:
         ordering = ['-created']
