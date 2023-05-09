@@ -27,14 +27,12 @@
 
 
 <body class="d-flex flex-column h-100 main-bg">
-  <div class = "background">
+  <div class="background">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'home' %}"><strong>Lightbulb</strong></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"><i class="far fa-lightbulb bulbcol"></i></span>
-        </button>
+          <span class="lightbulb-icon top-icon navbar-toggler" data-bs-toggle="collapse" aria-label="lightbulb-icon"><i class="far fa-lightbulb"></i></span>
+        
         <div class="collapse navbar-collapse">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             {% if user.is_authenticated %}
@@ -90,14 +88,22 @@
       </div>
       <div class="card-body">
         <h5 class="card-title"> We hope you made some progress today</h5>
-        <p class="card-text">Please consider leaving us some feedback on what we done well and what could be done better !</p>
+        <p class="card-text">Please consider leaving us some feedback on what we done well and what could be done better
+          !</p>
         <a href="{% url 'review_page' %}" class="btn btn-primary">Site Reviews</a>
       </div>
       <div class="card-footer text-body-secondary">
-        2 days ago
+        <span class="lightbulb-icon" aria-label="lightbulb-icon"><a href="#"><i class="far fa-lightbulb"></i></a></span>
       </div>
     </div>
   </footer>
+  <script>
+    setTimeout(function () {
+      let messages = document.getElementById('msg');
+      let alert = new bootstrap.Alert(messages);
+      alert.close();
+    }, 2500);
+  </script>
 
 </body>
 
