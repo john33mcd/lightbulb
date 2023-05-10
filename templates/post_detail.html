@@ -19,7 +19,16 @@
         </div>
     </div>
 </div>
-
+<div class="container">
+    <div class="row">
+        <div class="col">
+            {% if user.is_authenticated and user == post.author %}
+            <a href="{% url 'post_update' post.slug %}" class="btn btn-outline-primary">Update Post ?</a>
+            <a href="{% url 'post_delete' post.slug %}" class="btn btn-outline-danger">Delete Post ?</a>
+        </div>
+    </div>
+    {% endif %}
+</div>
 <div class="container">
     <div class="row">
         <div class="col card mb-4  mt-3 left top">
@@ -35,16 +44,17 @@
                             <form class="d-inline" action="{%url 'post_like' post.slug %}" method="POST">
                                 {% csrf_token %}
                                 {% if liked %}
-                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
+                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like liked"><i
                                         class="fas fa-heart"></i></button>
 
                                 {% else %}
 
-                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
-                                        class="far fa-heart"></i></button>
+                                <button type="submit" name="blogpost_id" value="{{post.slug}}"
+                                    class="btn-like nliked"><i class="far fa-heart"></i></button>
 
                                 {% endif %}
                             </form>
+
                             {% else %}
                             <span class="text-secondary"><i class="far fa-heart"></i></span>
                             {% endif %}
@@ -59,6 +69,7 @@
                         {% endwith %}
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -66,18 +77,6 @@
         <div class="col">
             <hr>
         </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                {% if user.is_authenticated and user == post.author %}
-                <a href="{% url 'post_update' post.slug %}" class="btn btn-outline-primary">Update Post ?</a>
-            </div>
-            <div class="col">
-                <a href="{% url 'post_delete' post.slug %}" class="btn btn-outline-danger">Delete Post ?</a>
-            </div>
-        </div>
-        {% endif %}
     </div>
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3 background">

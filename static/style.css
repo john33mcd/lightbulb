@@ -127,7 +127,16 @@ text-decoration: none;
     color: white;
   }
   
+.liked{
+    color: rgb(185, 0, 0);
+    background-color:#EEE8a9;
+}
 
-  footer {
+.nliked{
+    color: antiquewhite;
+    background-color: #1F5853;
+}
+
+footer {
     margin-top: auto;
 }
