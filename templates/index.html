@@ -3,19 +3,21 @@
 {% block content %}
 <div class="title-bar">
     <h1> Lightbulb, The home of good ideas </h1>
-  </div>
+</div>
 <div class="hero-image">
     <div class="hero-text">
-      <h2> Ideas are meant to be shared</h2>
-      <p> take the first step now - </p>
-      {% if user.is_authenticated %}
-      <button class="btn btn-primary"><a href="{% url 'post_create' %} " class="no-dec"><h3>Create Post</h3></a></button>
-      {% else %}
-      <a href="{% url 'account_login' %}"> Please log in to share a post </a>
-      {% endif %}
+        <h2> Ideas are meant to be shared</h2>
+        <p> take the first step now - </p>
+        {% if user.is_authenticated %}
+        <button class="btn btn-primary"><a href="{% url 'post_create' %} " class="no-dec">
+                <h3>Create Post</h3>
+            </a></button>
+        {% else %}
+        <a href="{% url 'account_login' %}"> Please log in to share a post </a>
+        {% endif %}
     </div>
-  </div>
-  
+</div>
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 mt-3 left">

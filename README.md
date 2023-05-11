@@ -70,6 +70,12 @@ Each post populates using a pre decided image. Details of the Author, post subje
 
 <img src = "media/readmeMedia/samplePost.jpg">
 
+### Create Post
+
+Simple form allows creation of a post, returns user to home page.
+
+<img src = "media/readmeMedia/createPostPage.jpg">
+
 ### Post Details 
 
 If the user clicks into a post they can see the full post, if logged in they are provided options to edit and delete if they own the post and can also add a like.
@@ -85,6 +91,12 @@ The user can also add a comment if they are logged in and see other users commen
 The review page uses the hero area to provide users the option of creating a review if they would like, they can also view other users reviews and opinion from this area.
 
 <img src = "media/readmeMedia/reviewPage.jpg">
+
+### Create Review
+
+Simple form allows creation of a review, requesting a title, description and rating based on a drop down menu. Returns user to home screen upon posting.
+
+<img src = "media/readmeMedia/reviewFormPage.jpg">
 
 ### Palette
 
