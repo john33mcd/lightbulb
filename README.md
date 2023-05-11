@@ -27,11 +27,64 @@ The Design is purposely simple, only options that are value adding are presented
 
 ## Design Features
 
+
+### Authentication routes
+
+Full range of login, logout and register functionality is available.
+<img src= "media/readmeMedia/loginPage.jpg">
+
+<img src= "media/readmeMedia/logoutPage.jpg">
+
+<img src= "media/readmeMedia/signupPage.jpg">
+
+
 ### Header
+
+The header area of the website comprises of two elements, the navigation bar and the hero element.
+
+#### Navigation Bar
+
+The navigation bar sticks to the intended simplistic approach, it allows logged in users to return home by clicking the logo or to logout.
+
+<img src= "media/readmeMedia/navloggedin.jpg">
+
+If the user is not logged in, options to return home, register an account or log in are available.
+
+<img src= "media/readmeMedia/navloggedout.jpg">
+
+#### Hero area
+
+The area immediately below the navigation bar uses larger font to define the website and prompts logged in users to create a post if they wish, this is replaced with an option to log in if the user is not currently logged in.
+
+<img src = "media/readmeMedia/heroPage.jpg">
 
 ### Footer
 
-### Main page
+The footer allows the user to navigate to the reviews page or to return home using the lightbulb logo.
+
+<img src = "media/readmeMedia/footerPage.jpg">
+
+### Main Page
+
+Each post populates using a pre decided image. Details of the Author, post subject, Date and Time are all evident from the main page.
+
+<img src = "media/readmeMedia/samplePost.jpg">
+
+### Post Details 
+
+If the user clicks into a post they can see the full post, if logged in they are provided options to edit and delete if they own the post and can also add a like.
+
+<img src = "media/readmeMedia/postDetailsPage.jpg">
+
+The user can also add a comment if they are logged in and see other users comments.
+
+<img src = "media/readmeMedia/postDetailsPage2.jpg">
+
+### Review Page
+
+The review page uses the hero area to provide users the option of creating a review if they would like, they can also view other users reviews and opinion from this area.
+
+<img src = "media/readmeMedia/reviewPage.jpg">
 
 ### Palette
 
@@ -49,23 +102,27 @@ font-family: 'Roboto Slab', serif;
 
 ### Flowchart - intended website build 
 
-<img src="/workspace/lightbulb/media/readmeMedia/Flowchart.jpg">
+<img src="media/readmeMedia/Flowchart.jpg">
 
 ### Wireframes
 
-<img src="/workspace/lightbulb/media/readmeMedia/wireframe1.jpg">
-<img src="/workspace/lightbulb/media/readmeMedia/wireframe2.jpg">
+<img src="media/readmeMedia/wireframe1.jpg">
+<img src="media/readmeMedia/wireframe2.jpg">
 
 
 
 
-<img src="/workspace/lightbulb/media/readmeMedia/wireframePhone.jpg">
-<img src="/workspace/lightbulb/media/readmeMedia/wireframePhone2.jpg">
+<img src="media/readmeMedia/wireframePhone.jpg">
+<img src="media/readmeMedia/wireframePhone2.jpg">
 
 
 ## Current Active Features
 
+The website currently offers the user login/logout functionality aswell as an option to register an account if they dont yet have one. The user when logged in can easily manouvre the website due to its simplistic layout and can post a thread to start a discussion with other users and share their ideas, they can also leave a review of their experience with the website. 
+
 ## Potential Future Features
+
+I would like to include options for users to categorize posts based on various filters aswell as options to favourite posts and have their own personal landing page for this.
 
 
 ## User Stories
@@ -101,7 +158,11 @@ Kanban board with user stories available at [User Stories Kanban board](https://
 
 ### User Goals
 
+The goal for a user is to make posts and comments and branch out their network depending on their own interests. The idea behind the website is to provide a platform for individuals to find like minded people and allow them to interact and engage with them.
+
 ### Admin Goals
+
+As an admin the goal was to be able to monitor a blog application. Options to reject or delete posts or reviews that are unsuitable is important and has been implemented. Verification is in place for comments and posts so any unsuitable requests are denied. Users of the website can also be monitored through the admin panel.
 
 ## Testing
 
