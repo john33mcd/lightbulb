@@ -26,8 +26,8 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
-                                <img class="card-img-top"
-                                    src="https://images.pexels.com/photos/1495580/pexels-photo-1495580.jpeg">
+                                <img class="card-img-top post-image-main"
+                                    src="https://res.cloudinary.com/dile5rizd/image/upload/v1683803086/mainlightbulb_ku1b4z.jpg">
                                 {% else %}
                                 <img src=" {{ post.featured_image.url }}">
                                 {% endif %}
