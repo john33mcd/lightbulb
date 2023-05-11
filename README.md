@@ -37,7 +37,7 @@ The Design is purposely simple, only options that are value adding are presented
 
 The palette that has been used is a mix of solid, complimentary colours so as to not over complicate or take away from the blog aspect of the website
 
-<img src="/workspace/lightbulb/media/readmeMedia/palettelightbulb.jpg">
+<img src= "media/readmeMedia/palettelightbulb.jpg">
 
 ### Fonts
 
