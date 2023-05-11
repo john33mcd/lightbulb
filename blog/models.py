@@ -62,7 +62,7 @@ choices = [
 
 class Review(models.Model):
     title = models.CharField(
-        max_length=200, unique=True, default="Review Title")
+        max_length=200, unique=True, default="Please give your review a title")
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="review_list")
