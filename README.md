@@ -35,7 +35,33 @@ The Design is purposely simple, only options that are value adding are presented
 
 ### Palette
 
+The palette that has been used is a mix of solid, complimentary colours so as to not over complicate or take away from the blog aspect of the website
+
+<img src="/workspace/lightbulb/media/readmeMedia/palettelightbulb.jpg">
+
 ### Fonts
+
+Utilised the following fonts from google fonts -
+
+font-family: 'Bebas Neue', cursive;
+font-family: 'Roboto Slab', serif;
+
+
+### Flowchart - intended website build 
+
+<img src="/workspace/lightbulb/media/readmeMedia/Flowchart.jpg">
+
+### Wireframes
+
+<img src="/workspace/lightbulb/media/readmeMedia/wireframe1.jpg">
+<img src="/workspace/lightbulb/media/readmeMedia/wireframe2.jpg">
+
+
+
+
+<img src="/workspace/lightbulb/media/readmeMedia/wireframePhone.jpg">
+<img src="/workspace/lightbulb/media/readmeMedia/wireframePhone2.jpg">
+
 
 ## Current Active Features
 
@@ -105,7 +131,24 @@ __FIX__ -
 
 * Ran out of gitpod hours and received extra permissions through tutor support, migration of project resulted in env.py file being removed from new workspace causing project not to load, rectified by rebuilding env.py file.
 
+
 ## Deployment
+
+- Install all dependencies to begin, add all dependencies to requirements.txt file using the pip3 freeze --local > requirements.txt command.
+
+- Create django project and app using the relevant commands.
+
+- Go to Heroku, click New on the dashboard, create new app, name the app and click create.
+
+- link database on the elephantSQL.com website, create, name and plan was selected for new instance.
+
+- set environment variables using env.py file in order to keep sensitive keys and files secure.
+
+- get API key from external media host Cloudinary and add it to project.
+
+- Add config vars on heroku for database, secret key and external media host (Cloudinary).
+
+- connect to github account on Heroku, search for relevant repo on this project page and then build.
 
 ## Credits and References
 
