@@ -15,7 +15,7 @@ There is post approval in place in order to filter posts to assure all posts are
 
 Link to live website -
 
-[Lightbulb](#)
+[Lightbulb](https://lightbulb.herokuapp.com/)
 
 place AMI RESPONSIVE HERE.
 
