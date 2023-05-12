@@ -188,6 +188,8 @@ As an admin the goal was to be able to monitor a blog application. Options to re
 
 ### W3C HTML
 
+No errors were returned when HTML was passed through the official W3C HTML Validator. Template Literals were removed when the code was being run as the validator was giving errors regarding use of template literals.
+
 ### W3C CSS
 
 No errors were returned when CSS was passed through the official W3C CSS Validator (Jigsaw Validator)

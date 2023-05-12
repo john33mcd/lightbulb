@@ -5,7 +5,7 @@
 <form method="POST" enctype="multipart/form-data" name="form1">
 
     {% csrf_token %}
-    <legend> Delete Post</legend>
+    
     <h2> Are you sure you would like to delete this post "{{ post.title }}"?</h2>
 
     <button class="btn btn-outline-danger" type="submit">Delete Post</button>

@@ -7,9 +7,9 @@
         <h2> Please take a moment to provide feedback</h2>
         <p> let us know how your experience went</p>
         {% if user.is_authenticated %}
-        <button class="btn btn-primary"><a href="{% url 'review_create' %}" class="no-dec">
-                <h3> Create a Review ?</h3>
-            </a></button>
+        <a href="{% url 'review_create' %}" class="no-dec btn btn-primary">
+            Create a Review ?
+        </a>
         {% else %}
         <a href="{% url 'account_login' %}"> Please log in to create a review </a>
         {% endif %}
@@ -26,9 +26,9 @@
                     <hr />
                     <div class="card mb-6">
                         <div class="card-body background">
-                            <span>
+                            <div>
                                 <h2 class="card-title">{{ review.title }}</h2>
-                            </span>
+                            </div>
                             <span>
                                 {{ review.review_body }}
                             </span>
