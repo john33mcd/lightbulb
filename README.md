@@ -178,7 +178,7 @@ As an admin the goal was to be able to monitor a blog application. Options to re
 
 ## Testing
 
-## Entity Relationship Diagram, Database
+Automated testing unavailable due to error with database, could not get testing to work. Manual testing conducted.
 
 ## validation
 
