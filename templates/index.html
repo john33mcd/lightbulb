@@ -10,7 +10,7 @@
         <p> take the first step now - </p>
         {% if user.is_authenticated %}
         <button class="btn btn-primary"><a href="{% url 'post_create' %} " class="no-dec">
-                <h3>Create Post</h3>
+                <span>Create Post<span>
             </a></button>
         {% else %}
         <a href="{% url 'account_login' %}"> Please log in to share a post </a>
@@ -28,7 +28,7 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
-                                <img class="card-img-top post-image-main"
+                                <img class="card-img-top post-image-main" alt="placeholder"
                                     src="https://res.cloudinary.com/dile5rizd/image/upload/v1683803086/mainlightbulb_ku1b4z.jpg">
                                 {% else %}
                                 <img src=" {{ post.featured_image.url }}">

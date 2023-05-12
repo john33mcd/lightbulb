@@ -184,9 +184,13 @@ As an admin the goal was to be able to monitor a blog application. Options to re
 
 ### Lighthouse
 
+<img src="media/readmeMedia/lightbulbSEO.jpg">
+
 ### W3C HTML
 
 ### W3C CSS
+
+No errors were returned when CSS was passed through the official W3C CSS Validator (Jigsaw Validator)
 
 ### python validation
 

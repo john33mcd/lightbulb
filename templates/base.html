@@ -1,7 +1,7 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html class="h-100">
+<html class="h-100" lang="en">
 
 <head>
   <title>Lightbulb</title>
@@ -21,7 +21,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
   </script>
-  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel="stylesheet" href="{% static 'static/style.css' %}">
 
 </head>
 
@@ -31,9 +31,9 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'home' %}"><strong>Lightbulb</strong></a>
-        <span class="lightbulb-icon top-icon navbar-toggler" data-bs-toggle="collapse" aria-label="lightbulb-icon"><i
+        <span class="lightbulb-icon top-icon navbar-toggler" data-bs-toggle="collapse" aria-label="-lightbulb"><i
             class="far fa-lightbulb"></i>
-          </span>
+        </span>
 
         <div class="collapse navbar-collapse">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -85,13 +85,14 @@
       <div class="card-header">
       </div>
       <div class="card-body">
-        <h5 class="card-title"> We hope you made some progress today</h5>
+        <p> We hope you made some progress today</p>
         <p class="card-text">Please consider leaving us some feedback on what we done well and what could be done better
           !</p>
         <a href="{% url 'review_page' %}" class="btn btn-primary">Site Reviews</a>
       </div>
       <div class="card-footer text-body-secondary">
-        <span class="lightbulb-icon" aria-label="lightbulb-icon"><a href="{% url 'home' %}"><i class="far fa-lightbulb"></i></a></span>
+        <span class="lightbulb-icon" aria-label="lightbulb-icon"><a href="{% url 'home' %}"><i
+              class="far fa-lightbulb"></i></a></span>
       </div>
     </div>
   </footer>
