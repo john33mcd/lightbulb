@@ -178,7 +178,7 @@ As an admin the goal was to be able to monitor a blog application. Options to re
 
 ## Testing
 
-Automated testing unavailable due to error with database, could not get testing to work. Manual testing conducted.
+Automated testing unavailable due to error with database, could not get testing to work. Manual testing conducted. Tested all elements myself, logged in, signed out, registered accounts, posted, commented and left likes on posts. I had relatives and peers test the site and asked them to attempt to break elements of the site in any way they could. 
 
 ## validation
 
