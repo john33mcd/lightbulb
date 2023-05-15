@@ -33,6 +33,7 @@
         <a class="navbar-brand" href="{% url 'home' %}"><strong>Lightbulb</strong></a>
         <span class="lightbulb-icon top-icon navbar-toggler" data-bs-toggle="collapse" aria-label="-lightbulb"><i
             class="far fa-lightbulb"></i>
+            
         </span>
 
         <div class="collapse navbar-collapse">
@@ -91,6 +92,17 @@
         <a href="{% url 'review_page' %}" class="btn btn-primary">Site Reviews</a>
       </div>
       <div class="card-footer text-body-secondary">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a id="navItem1" class="nav-link active" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a id="navItem2" class="nav-link" href="{%url 'account_signup' %}">Register</a>
+          </li>
+          {% endif %}
+        </ul>
         <span class="lightbulb-icon" aria-label="lightbulb-icon"><a href="{% url 'home' %}"><i
               class="far fa-lightbulb"></i></a></span>
       </div>
