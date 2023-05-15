@@ -17,11 +17,10 @@ Link to live website -
 
 [Lightbulb](https://lightbulb.herokuapp.com/)
 
-place AMI RESPONSIVE HERE.
 
 ## Design
 
-The Design is purposely simple, only options that are value adding are presented to site visitors, if logged in they can instantly post using the button presented to them. Individuals who are not logged in have the option to log in or register on the navigation bar, they can do this or they can scroll and browse posts without doing so. The bottom of the page allows the user to navigate to the review page where they can leave a review if they wish.
+The Design is purposely simple, only options that are value adding are presented to site visitors, if logged in they can instantly post using the button presented to them. Individuals who are not logged in have the option to log in or register on the navigation bar, they can do this or they can scroll and browse posts without doing so. The bottom of the page allows the user to navigate to the review page where they can leave a review if they wish. The website is fully responsive and scales to all device sizes.
 
 ## Design Features
 
@@ -193,8 +192,6 @@ No errors were returned when HTML was passed through the official W3C HTML Valid
 ### W3C CSS
 
 No errors were returned when CSS was passed through the official W3C CSS Validator (Jigsaw Validator)
-
-### python validation
 
 ## Bugs and Issues
 
