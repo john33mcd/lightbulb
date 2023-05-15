@@ -177,7 +177,7 @@ As an admin the goal was to be able to monitor a blog application. Options to re
 
 Automated testing unavailable due to error with database, could not get testing to work. Manual testing conducted. Tested all elements myself, logged in, signed out, registered accounts, posted, commented and left likes on posts. I had relatives and peers test the site and asked them to attempt to break elements of the site in any way they could. 
 
-On the back of manual testing it was identified that there was no way to logout after having logged in and there was also no option to log in unless you first opted to sign in, buttons have been added to the footer in order to fix this problem.
+On the back of manual testing it was identified that there was no way to logout after having logged in and there was also no option to log in unless you first opted to sign in on the mobile version of the application, buttons have been added to the footer in order to rectify this problem.
 
 ## validation
 
