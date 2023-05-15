@@ -19,8 +19,6 @@ Link to live website -
 
 place AMI RESPONSIVE HERE.
 
-## Table of Contents
-
 ## Design
 
 The Design is purposely simple, only options that are value adding are presented to site visitors, if logged in they can instantly post using the button presented to them. Individuals who are not logged in have the option to log in or register on the navigation bar, they can do this or they can scroll and browse posts without doing so. The bottom of the page allows the user to navigate to the review page where they can leave a review if they wish.
@@ -180,6 +178,8 @@ As an admin the goal was to be able to monitor a blog application. Options to re
 
 Automated testing unavailable due to error with database, could not get testing to work. Manual testing conducted. Tested all elements myself, logged in, signed out, registered accounts, posted, commented and left likes on posts. I had relatives and peers test the site and asked them to attempt to break elements of the site in any way they could. 
 
+On the back of manual testing it was identified that there was no way to logout after having logged in and there was also no option to log in unless you first opted to sign in, buttons have been added to the footer in order to fix this problem.
+
 ## validation
 
 ### Lighthouse
@@ -209,6 +209,10 @@ __FIX__ -
 * Had bug where no reverse match was available, this was due to a post with the title '-' throwing the error, rectified by removing this post in admin.
 
 * Ran out of gitpod hours and received extra permissions through tutor support, migration of project resulted in env.py file being removed from new workspace causing project not to load, rectified by rebuilding env.py file.
+
+## Unresolved Bugs and Issues
+
+* Currently have an issue where automated testing will not function, the issue relates to the database, manual testing carried out to bypass the lack of automated testing.
 
 
 ## Deployment
